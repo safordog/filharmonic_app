@@ -32,7 +32,7 @@ This is an imitation of service for booking tickets to the philharmonic.
     - Clicks **+** icon, select Tomcat Server –>> Local<br/>
     - Clicks on the **fix** icon and choose the exploded war version
     - On the **deployment** tab in **application context** field remove data and put **"/"**;
-    - Press **OK**.
+    - Press **OK**.<br/>
       }<br/>
 - to log in as admin: *{"name":"bob@i.ua", "password":"123"}* or as user: *{"name":"alice@i.ua", "password":"1234"}*;
 - use [Postman](https://www.postman.com/) or something similar to create queries:
