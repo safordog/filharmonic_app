@@ -19,13 +19,13 @@ This is an imitation of service for booking tickets to the philharmonic.
 - Git
 ### How to use
 - clone the repository
-- configure the database connection file - *"src/main/resources/db.properties"*:
+- configure the database connection file - *"src/main/resources/db.properties"*:<br/>
   {<br/>
     - db.url="jdbc:mysql://localhost:3306/**your database name**?serverTimezone=GMT";<br/>
     - db.user="**your database username**";<br/>
     - db.password="**your database password**";<br/>
       }<br/>
-- configure Tomcat:
+- configure Tomcat:<br/>
   {<br/>
   **IntellijIdea:**
     - Run –>> Edit Configurations…
@@ -35,7 +35,7 @@ This is an imitation of service for booking tickets to the philharmonic.
     - Press **OK**.<br/>
       }<br/>
 - to log in as admin: *{"name":"bob@i.ua", "password":"123"}* or as user: *{"name":"alice@i.ua", "password":"1234"}*;
-- use [Postman](https://www.postman.com/) or something similar to create queries:
+- use [Postman](https://www.postman.com/) or something similar to create queries:<br/>
   {<br/>
   you can see all current URLs in the corresponding controllers: *"src/main/java/spring/controller"*<br/>
   For example:
