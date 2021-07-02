@@ -12,7 +12,8 @@ import spring.exception.DataProcessingException;
 import spring.model.ConcertSession;
 
 @Repository
-public class ConcertSessionDaoImpl extends AbstractDao<ConcertSession> implements ConcertSessionDao {
+public class ConcertSessionDaoImpl extends AbstractDao<ConcertSession>
+        implements ConcertSessionDao {
     public ConcertSessionDaoImpl(SessionFactory factory) {
         super(factory, ConcertSession.class);
     }
@@ -22,7 +23,8 @@ public class ConcertSessionDaoImpl extends AbstractDao<ConcertSession> implement
         try (Session session = factory.openSession()) {
             Query<ConcertSession> getAvailableSessions = session.createQuery(
                     "FROM MovieSession WHERE id = :id "
-                            + "AND DATE_FORMAT(showTime, '%Y-%m-%d') = :date", ConcertSession.class);
+                            + "AND DATE_FORMAT(showTime, '%Y-%m-%d') = :date",
+                    ConcertSession.class);
             getAvailableSessions.setParameter("id", movieId);
             getAvailableSessions.setParameter("date", date.toString());
             return getAvailableSessions.getResultList();

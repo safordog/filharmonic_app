@@ -11,14 +11,16 @@ import spring.service.ConcertService;
 import spring.util.DateTimePatternUtil;
 
 @Component
-public class ConcertSessionMapper implements RequestDtoMapper<ConcertSessionRequestDto, ConcertSession>,
+public class ConcertSessionMapper
+        implements RequestDtoMapper<ConcertSessionRequestDto, ConcertSession>,
         ResponseDtoMapper<ConcertSessionResponseDto, ConcertSession> {
     private final DateTimeFormatter formatter =
             DateTimeFormatter.ofPattern(DateTimePatternUtil.DATE_TIME_PATTERN);
     private final ConcertHallService concertHallService;
     private final ConcertService concertService;
 
-    public ConcertSessionMapper(ConcertHallService concertHallService, ConcertService concertService) {
+    public ConcertSessionMapper(ConcertHallService concertHallService,
+                                ConcertService concertService) {
         this.concertHallService = concertHallService;
         this.concertService = concertService;
     }

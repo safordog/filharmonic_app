@@ -54,7 +54,8 @@ public class ConcertSessionController {
 
     @PutMapping("/{id}")
     public ConcertSessionResponseDto update(@PathVariable Long id,
-                                            @RequestBody @Valid ConcertSessionRequestDto requestDto) {
+                                            @RequestBody @Valid
+                                                    ConcertSessionRequestDto requestDto) {
         ConcertSession concertSession = concertSessionMapper.mapToModel(requestDto);
         concertSession.setId(id);
         concertSessionService.update(concertSession);
