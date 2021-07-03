@@ -1,4 +1,5 @@
 # Philharmonic app
+![logo](images/relations_logo.png)
 ### About
 This is an imitation of service for booking tickets to the philharmonic.
 ### Functionality
